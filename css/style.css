@@ -7,15 +7,15 @@
 /* Custom Properties */
 
 :root {
-    --ff-primary: 'Source Sans Pro', sans-serif;
-    --ff-secondary: 'Source Code Pro', monospace;
+    --ff-primary: 'Roboto', sans-serif;
+    --ff-secondary: 'Noto Sans JP', sans-serif;
 
     --fw-reg: 300;
     --fw-bold: 900;
 
-    --clr-light: #fff;
-    --clr-dark: #303030;
-    --clr-accent: #bf0603;
+    --clr-primary: #1d3557;
+    --clr-secondary: #f1faee;
+    --clr-accent: #e63946;
 
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -42,8 +42,8 @@ html {
 }
 
 body {
-    background: var(--clr-light);
-    color: var(--clr-dark);
+    background: var(--clr-primary);
+    color: var(--clr-secondary);
     margin: 0;
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
@@ -72,7 +72,7 @@ strong { font-weight: var(--fw-bold) }
     display: inline-block;
     padding: .5em 2.5em;
     background: var(--clr-accent);
-    color: var(--clr-dark);
+    color: var(--clr-secondary);
     text-decoration: none;
     cursor: pointer;
     font-size: .8rem;
@@ -146,8 +146,8 @@ header {
 
 .nav {
     position: fixed;
-    background: var(--clr-dark);
-    color: var(--clr-light);
+    background: var(--clr-secondary);
+    color: var(--clr-primary);
     top: 0;
     bottom: 0;
     left: 0;
@@ -202,12 +202,12 @@ header {
 
 .nav-open .hamburger {
     transform: rotate(.625turn);
-    background: var(--clr-light);
+    background: var(--clr-primary);
 }
 
 .nav-open .hamburger::before {
     transform: rotate(90deg) translateX(-6px);
-    background: var(--clr-light);
+    background: var(--clr-primary);
 }
 
 .nav-open .hamburger::after {
@@ -222,7 +222,7 @@ header {
 .hamburger,
 .hamburger::before,
 .hamburger::after {
-    background: var(--clr-dark);
+    background: var(--clr-secondary);
     width: 2em;
     height: 3px;
     border-radius: 1em;
@@ -285,8 +285,8 @@ header {
 /* my services section */
 
 .my-services {
-    background-color: var(--clr-dark);
-    color: var(--clr-light);
+    background-color: var(--clr-secondary);
+    color: var(--clr-primary);
     text-align: center;
 }
 
@@ -356,7 +356,7 @@ header {
         grid-row: 2;
         position: relative;
         left: -2em;
-        width: calc(100% + 4em);
+        width: calc(100% + 3.5em);
         padding-left: 2em;
         padding-right: calc(200px + 4em);
     }
@@ -371,8 +371,8 @@ header {
 /* My Work */
 
 .my-work {
-    background-color: var(--clr-dark);
-    color: var(--clr-light);
+    background-color: var(--clr-secondary);
+    color: var(--clr-primary);
     text-align: center;
 }
 
@@ -381,11 +381,13 @@ header {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     max-width: 1500px;
     margin: 0 auto;
+    place-items: center;
 }
 
 .portfolio__item {
     background: var(--clr-accent);
     overflow: hidden;
+    max-width: 575px;
 }
 
 .portfolio__img {
@@ -448,4 +450,18 @@ header {
 
 .social-list__link {
     padding: .5em;
+}
+
+/* individual portfolio item styles */
+
+.portfolio-item-individual {
+    padding: 0 2em 2em;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.portfolio-item-individual p {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
