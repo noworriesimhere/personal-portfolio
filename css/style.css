@@ -134,6 +134,7 @@ h3 { font-size: var(--fs-h3) }
 
 /* header */
 
+
 header {
     display: flex;
     justify-content: space-between;
@@ -141,7 +142,13 @@ header {
 }
 
 .logo {
-    font-size: var(--fs-h3);
+    font-size: var(--fs-h2);
+    z-index: 1;
+}
+
+
+.logo p {
+    display: inline;
 }
 
 .nav {
@@ -187,8 +194,8 @@ header {
     border: 0;
     cursor: pointer;
     position: absolute;
-    right: 1em;
-    top: 1em;
+    right: 2em;
+    top: 1.75em;
     z-index: 1000;
 }
 
@@ -206,7 +213,7 @@ header {
 }
 
 .nav-open .hamburger::before {
-    transform: rotate(90deg) translateX(-6px);
+    transform: rotate(90deg) translateX(-10px);
     background: var(--clr-primary);
 }
 
@@ -239,13 +246,62 @@ header {
     right: 0;
 }
 
-.hamburger::before { top: 6px; }
-.hamburger::after { bottom: 6px; }
+.hamburger::before { top: 10px; }
+.hamburger::after { bottom: 10px; }
+
+@media (min-width: 600px) {
+    .active {
+        color: var(--clr-secondary);
+        background-color: var(--clr-primary);
+        border-radius: 20px;
+    }
+    
+    .logo {
+        font-size: var(--fs-h3);
+        color: var(--clr-primary);
+        position: fixed;
+        z-index: 11;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+
+    .nav {
+        z-index: 10;
+        height: 70px;
+    
+        transform: translateX(0);
+    
+    }
+
+    .nav__list {
+        list-style: none;
+        display: flex;
+        height: 100%;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav__link {
+        font-weight: var(--fw-reg);
+        font-size: var(--fs-body);
+        padding: .35em .65em;
+    }
+
+    .nav__item {
+        padding: 0 .4em;
+    }
+}
 
 /*  Intro section  */
 
 .intro {
     position: relative;
+    border-top: solid 2px var(--clr-secondary);
 }
 
 .intro__img {
@@ -254,6 +310,7 @@ header {
 
 @media (min-width: 600px) {
     .intro {
+        border-top: none;
         display: grid;
         width: min-content;
         margin: 0 auto;
