@@ -254,6 +254,7 @@ header {
         color: var(--clr-secondary);
         background-color: var(--clr-primary);
         border-radius: 20px;
+        transition: all 1s cubic-bezier(.5, 0, .5, 1);
     }
     
     .logo {
@@ -270,7 +271,6 @@ header {
     .nav {
         z-index: 10;
         height: 70px;
-    
         transform: translateX(0);
     
     }
@@ -289,7 +289,7 @@ header {
     .nav__link {
         font-weight: var(--fw-reg);
         font-size: var(--fs-body);
-        padding: .35em .65em;
+        padding: .35em .65em .45em;
     }
 
     .nav__item {
