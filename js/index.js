@@ -18,4 +18,7 @@ tl.to('.animation__slider', {x:'-100%', duration: 1.5, delay: 0.5 });
 tl.to('.animation', {x: '-100%', duration: 1}, "-=1");
 tl.fromTo('.nav', {opacity: 0}, {opacity: 1, duration: .5});
 tl.fromTo('#home', {opacity: 0}, {opacity: 1, duration: .5});
-tl.fromTo('.my-services', {opacity: 0}, {opacity: 1, duration: .5});
+tl.fromTo('#myServices', {opacity: 0}, {opacity: 1, duration: .5});
+tl.fromTo('#about', {opacity: 0}, {opacity: 1, duration: .5});
+tl.fromTo('#work', {opacity: 0}, {opacity: 1, duration: .5});
+
