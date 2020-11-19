@@ -11,26 +11,11 @@ for (let link of navLinks) {
     })
 }
 
-// Navbar animation 
+const tl = gsap.timeline({ defaults: { ease: 'power1.out' } })
 
-class DesktopMenu {
-    constructor (menuItem, rootMargin, threshold) {
-        this.menuItem = document.getElementById(menuItem)
-        let observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if(entry.isIntersecting) {
-                    document.querySelector(`.${menuItem}`).classList.add("active")
-                } else {
-                    document.querySelector(`.${menuItem}`).classList.remove("active")
-                }
-            });
-            }, {rootMargin: `${rootMargin}px`, threshold: threshold});
-
-        observer.observe(this.menuItem);
-    }
-}
-
-new DesktopMenu("home", 5, .75) //parameters: section, rootMargin, threshold
-new DesktopMenu("myServices", 5, .8)
-new DesktopMenu("about", 5, .8)
-new DesktopMenu("work", 5, .75)
+tl.to('.text', {y:'0%', duration: 1, stagger: 0.25});
+tl.to('.animation__slider', {x:'-100%', duration: 1.5, delay: 0.5 });
+tl.to('.animation', {x: '-100%', duration: 1}, "-=1");
+tl.fromTo('.nav', {opacity: 0}, {opacity: 1, duration: .5});
+tl.fromTo('#home', {opacity: 0}, {opacity: 1, duration: .5});
+tl.fromTo('.my-services', {opacity: 0}, {opacity: 1, duration: .5});
