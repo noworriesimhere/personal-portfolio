@@ -138,17 +138,20 @@ h3 { font-size: var(--fs-h3) }
 header {
     display: flex;
     justify-content: space-between;
-    padding: 1em;
+    padding-bottom: 2rem;
 }
 
 .logo {
-    font-size: var(--fs-h3);
+    height: 40px;
     z-index: 1;
 }
 
+.logo img {
+    height: 4.5rem;
+}
 
-.logo p {
-    display: inline;
+.logo2 {
+    display: none;
 }
 
 .nav {
@@ -261,6 +264,14 @@ header {
         color: var(--clr-primary);
         position: fixed;
         z-index: 11;
+    }
+
+    .logo1 {
+        display: none;
+    }
+
+    .logo2 {
+        display: block;
     }
 
     .nav-toggle {
