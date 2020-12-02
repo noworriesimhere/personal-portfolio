@@ -1,0 +1,43 @@
+.intro {
+    position: relative;
+    border-top: solid 2px var(--clr-secondary);
+    height: 100vh;
+}
+
+.intro__img {
+    box-shadow: var(--bs);
+}
+
+.smaller-title {
+    font-size: var(--fs-h3);
+    margin-bottom: 1rem;;
+}
+
+@media (min-width: 600px) {
+    .intro {
+        border-top: none;
+        display: grid;
+        width: min-content;
+        margin: 0 auto;
+        grid-column-gap: 1em;
+        grid-template-areas: 
+            "subtitle img"
+            "title img";
+        grid-template-columns: max-content min-content ;
+    }
+    
+    .intro__img {
+        grid-area: img;
+        min-width: 250px;
+        position: relative;
+        z-index: 2;
+    }    
+
+    .section__subtitle--intro {
+        align-self: start;
+        grid-column: -1 / 1 ;
+        grid-row: 1;
+        position: relative;
+        width: calc(100% + 1em);
+    }
+}
