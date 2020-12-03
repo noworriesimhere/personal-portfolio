@@ -36,11 +36,17 @@
         align-items: center;
         justify-content: center;
         height: 100%;
+        transform: translateY(-10%);
     }
 
     &__hero h2 {
         font-size: var(--fs-h1);
         font-weight: var(--fw-reg);
+        margin-bottom: 3rem;
+    }
+
+    &__hero a {
+        color: var(--clr-primary);
     }
 }
 

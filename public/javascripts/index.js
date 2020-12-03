@@ -1,10 +1,10 @@
 import '../stylesheets/styles.css';
 import Navbar from './modules/navbar';
-import Video from './modules/video';
+import Fader from './modules/fader';
 import Gsap from './modules/gsap'
 
 let navbar = new Navbar;
-let video = new Video;
+let fader = new Fader;
 let gsap = new Gsap;
 
 if (module.hot) {

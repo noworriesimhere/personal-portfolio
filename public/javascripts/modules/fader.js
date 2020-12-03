@@ -1,4 +1,4 @@
-class Video {
+class Fader {
     constructor() {
         this.overlay = document.querySelector(".intro__video-overlay")
         this.header = document.querySelector(".header")
@@ -11,9 +11,10 @@ class Video {
         
             if(window.pageYOffset > window.innerHeight) {
                 this.overlay.style.opacity = 1;
+            } else if (window.pageYOffset > window.innerHeight*.6) {
                 this.header.style.opacity = 1;
             } else {
-                this.overlay.style.opacity = rate*3;
+                this.overlay.style.opacity = rate*2;
                 this.header.style.opacity = 0;
             }
         })
@@ -21,4 +22,4 @@ class Video {
 }
 
 
-export default Video;
+export default Fader;

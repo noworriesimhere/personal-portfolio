@@ -15,6 +15,7 @@
     color: rgb(var(--clr-secondary));
     font-family: var(--ff-secondary);
     font-size: 3rem;
+    transform: translateY(-20%);
 }
 
 .animation__hide {

@@ -4,7 +4,7 @@ class Gsap {
         this.events();
     }
     events() {
-        this.tl.to('.text', {y:'0%', duration: 1, stagger: 0.4});
+        this.tl.to('.text', {y:'0%', duration: .75, stagger: .5});
         this.tl.to('.animation__slider', {x:'-100%', duration: 1, delay: 0.5 });
         this.tl.to('.animation', {x: '-100%', duration: 1}, "-=1");
     }
