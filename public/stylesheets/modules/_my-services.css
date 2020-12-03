@@ -1,11 +1,16 @@
 .my-services {
-    background-color: var(--clr-secondary);
-    color: var(--clr-primary);
+    background-color: rgb(var(--clr-secondary));
+    color: rgb(var(--clr-primary));
     text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .section__title--services {
-    color: var(--clr-accent);
+    color: rgb(var(--clr-accent));
     position: relative;
 }
 
@@ -44,6 +49,7 @@
 .about-me {
     max-width: 900px;
     margin: 0 auto;
+    background-color: rgba(var(--clr-primary), 0.6);
 }
 
 .about-me__img {

@@ -1,6 +1,6 @@
 .footer {
     background: #111;
-    color: var(--clr-accent);
+    color: rgb(var(--clr-accent));
     text-align: center;
     padding: 2.5em 0 1em;
     font-size: var(--fs-h3);

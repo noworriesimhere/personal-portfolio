@@ -1,5 +1,5 @@
 .animation {
-    background-color: var(--clr-primary);
+    background-color: rgb(var(--clr-primary));
     position: fixed;
     top: 0;
     left: 0;
@@ -12,13 +12,13 @@
 }
 
 .animation__text {
-    color: var(--clr-secondary);
+    color: rgb(var(--clr-secondary));
     font-family: var(--ff-secondary);
     font-size: 3rem;
 }
 
 .animation__hide {
-    background-color: var(--clr-primary);
+    background-color: rgb(var(--clr-primary));
     overflow: hidden;
     margin-top: 0;
     margin-bottom: 0;
@@ -32,7 +32,7 @@
 }
 
 .animation__slider {
-    background: var(--clr-secondary);
+    background: rgb(var(--clr-secondary));
     position: fixed;
     top: 0;
     left: 0;

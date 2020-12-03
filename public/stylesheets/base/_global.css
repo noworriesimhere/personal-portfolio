@@ -18,8 +18,8 @@ html {
 }
 
 body {
-    background: var(--clr-primary);
-    color: var(--clr-secondary);
+    background: rgb(var(--clr-primary));
+    color: rgb(var(--clr-secondary));
     margin: 0;
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
@@ -38,6 +38,6 @@ img {
 strong { font-weight: var(--fw-bold) }
 
 :focus {
-    outline: 3px solid var(--clr-accent);
+    outline: 3px solid rgb(var(--clr-accent));
     outline-offset: 3px;
 }

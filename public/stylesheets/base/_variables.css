@@ -5,9 +5,9 @@
     --fw-reg: 300;
     --fw-bold: 900;
 
-    --clr-primary: #1d3557;
-    --clr-secondary: #f1faee;
-    --clr-accent: #e63946;
+    --clr-primary: 49,8,31;
+    --clr-secondary: 220,224,217;
+    --clr-accent: 107,15,26;
 
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;

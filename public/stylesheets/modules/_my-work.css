@@ -1,6 +1,6 @@
 .my-work {
-    background-color: var(--clr-secondary);
-    color: var(--clr-primary);
+    background-color: rgb(var(--clr-secondary));
+    color: rgb(var(--clr-primary));
     text-align: center;
 }
 
@@ -13,7 +13,7 @@
 }
 
 .portfolio__item {
-    background: var(--clr-accent);
+    background: rgb(var(--clr-accent));
     overflow: hidden;
     max-width: 575px;
 }

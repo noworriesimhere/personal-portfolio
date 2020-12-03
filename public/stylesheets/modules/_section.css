@@ -19,14 +19,14 @@
 
 .section__subtitle--intro,
 .section__subtitle--about {
-    background: var(--clr-accent);
+    background: rgb(var(--clr-accent));
     padding: .25em 1em;
     font-family: var(--ff-secondary);
     margin-bottom: 1em;
 }
 
 .section__subtitle--work {
-    color: var(--clr-accent);
+    color: rgb(var(--clr-accent));
     font-weight: var(--fw-bold);
     margin-bottom: 2em;
 }
