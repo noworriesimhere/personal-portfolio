@@ -10,4 +10,3 @@ let gsap = new Gsap;
 if (module.hot) {
     module.hot.accept()
 }
-
