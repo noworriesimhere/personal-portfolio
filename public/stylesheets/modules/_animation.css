@@ -14,8 +14,21 @@
 .animation__text {
     color: rgb(var(--clr-secondary));
     font-family: var(--ff-secondary);
-    font-size: 3rem;
+    font-size: 1rem;
     transform: translateY(-20%);
+}
+
+.animation__text .text {
+    font-size: 1.5rem;
+    font-weight: var(--fw-reg);
+
+    @mixin atSmall {
+        font-size: 4rem;
+    }
+
+    @mixin atLarge {
+        font-size: 5rem;
+    }
 }
 
 .animation__hide {

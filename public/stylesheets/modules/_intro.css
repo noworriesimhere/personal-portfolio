@@ -40,13 +40,32 @@
     }
 
     &__hero h2 {
-        font-size: var(--fs-h1);
+        font-size: 4rem;
         font-weight: var(--fw-reg);
         margin-bottom: 3rem;
+
+        @mixin atSmall {
+            font-size: 4.3rem;
+        }
+    
+        @mixin atMedium {
+            font-size: 5.2rem;
+        }
+
+        @mixin atLarge {
+            font-size: 7rem;
+        }
     }
 
     &__hero a {
         color: var(--clr-primary);
+        align-self: flex-start;
+
+
+        @mixin atSmall {
+            align-self: center;
+            transform: translateY(150%);
+        }
     }
 }
 

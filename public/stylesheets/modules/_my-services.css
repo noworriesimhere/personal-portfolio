@@ -53,6 +53,11 @@
 
 .about-me__img {
     box-shadow: var(--bs);
+    display: none;
+
+    @mixin atSmall {
+        display: block;
+    }
 }
 
 .about-me__wrapper {

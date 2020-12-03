@@ -1,5 +1,5 @@
 .section__title {
-    margin-bottom: .25em;
+
 }
 
 .section__title--intro {
@@ -13,7 +13,6 @@
 
 
 .section__subtitle {
-    margin-top: rem;
     font-size: var(--fs-h3);
 }
 
