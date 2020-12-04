@@ -33,38 +33,54 @@
         z-index: 1;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
         height: 100%;
         transform: translateY(-10%);
+
+        @mixin atSmall {
+            align-items: center;
+        }
     }
 
-    &__hero h2 {
-        font-size: 4rem;
+    &__text {
+        font-size: 2.8rem;
         font-weight: var(--fw-reg);
         margin-bottom: 3rem;
+        transform: translateY(-20%);
+        opacity: 0;
 
         @mixin atSmall {
             font-size: 4.3rem;
         }
     
         @mixin atMedium {
-            font-size: 5.2rem;
+            font-size: 3.5rem;
         }
 
         @mixin atLarge {
-            font-size: 7rem;
+            font-size: 5rem;
         }
     }
 
-    &__hero a {
+    &__text span {
+        display: block;
+
+        @mixin atSmall {
+            text-align: center;
+        }
+        @mixin atMedium {
+            display: inline;
+        }
+    }
+
+    &__button {
         color: var(--clr-primary);
         align-self: flex-start;
-
+        opacity: 0;
 
         @mixin atSmall {
             align-self: center;
-            transform: translateY(150%);
         }
     }
 }

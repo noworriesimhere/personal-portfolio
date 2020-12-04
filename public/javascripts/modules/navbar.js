@@ -21,17 +21,5 @@ class Navbar {
     }
 }
 
-// const navToggle = document.querySelector('.nav-toggle');
-// const navLinks = document.querySelectorAll('.nav__link');
-
-// navToggle.addEventListener("click", () => {
-//     document.body.classList.toggle('nav-open');
-// })
-
-// for (let link of navLinks) {
-//     link.addEventListener('click', () => {
-//         document.body.classList.remove('nav-open');
-//     })
-// }
 
 export default Navbar;
