@@ -15,35 +15,80 @@ if (module.hot) {
     module.hot.accept()
 }
 
-// let adjective = document.querySelector(".intro__text--adjective");
-// let verb = document.querySelector(".intro__text--verb");
-// let noun = document.querySelector(".intro__text--noun");
+const lightboxItems = {
+    lightbox__item1 : `
+    <div class="lightbox__content">
+        <i class="fas fa-times-circle lightbox__close-btn fa-3x"></i>
+        <div class="lightbox__picture">
+            <img src="./img/portfolio-01.png" alt="">
+        </div>
+        <div class="lightbox__description">
+            <h3 class="lightbox__title">Travel Tours - Static Webpage</h3>
+            <h4 class="lightbox__subtitle">HTML, CSS, Javascript, Bootstrap 4</h4>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur accusantium tenetur veniam voluptates quos officiis recusandae modi aliquid consectetur, mollitia magnam nam cupiditate. Voluptatum, maiores consequatur ipsam eaque fuga porro!
+            </p>
+            <a href="https://parallaxtemplate.vercel.app/" target="_blank" class="btn">Go to Site</a>
+        </div>
+    </div>
+    `,
+    lightbox__item2 : `
+    <div class="lightbox__content">
+    <i class="fas fa-times-circle lightbox__close-btn fa-3x"></i>
+    <div class="lightbox__picture">
+        <img src="./img/portfolio-02.png" alt="">
+    </div>
+    <div class="lightbox__description">
+        <h3 class="lightbox__title">Custom Cakes - Static Webpage</h3>
+        <h4 class="lightbox__subtitle">HTML, PostCSS, Webpack, Javascript</h4>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur accusantium tenetur veniam voluptates quos officiis recusandae modi aliquid consectetur, mollitia magnam nam cupiditate. Voluptatum, maiores consequatur ipsam eaque fuga porro!
+        </p>
+        <a href="https://createbakery.netlify.app/" target="_blank" class="btn">Go to Site</a>
+    </div>
+</div>
+    `,
+    lightbox__item3: `
+    <div class="lightbox__content">
+    <i class="fas fa-times-circle lightbox__close-btn fa-3x"></i>
+    <div class="lightbox__picture">
+        <img src="./img/portfolio-03.png" alt="">
+    </div>
+    <div class="lightbox__description">
+        <h3 class="lightbox__title">YelpCamp - Web App</h3>
+        <h4 class="lightbox__subtitle">HTML, Bootstrap 5, Javscript, Node.js, Express, MongoDB</h4>
+        <p>
+            A full web app with both front end (HTML, Bootstrap, Javascript) and a back end server and database (Node.js, Express, MongoDB). Has full CRUD functionality (Create, read, update, delete) and follows RESTful (Representational state transfer) conventions.
+        </p>
+        <p>
+            Includes authentication and authorization powered by Passportjs and map support powered by the Mapbox API.
+        </p>
+        <a href="https://vast-savannah-21694.herokuapp.com/campgrounds" target="_blank" class="btn">Go to Site</a>
+    </div>
+</div>
+    `
+}
 
 
-// const adjectives = ['Beautifully', 'Immaculately', 'Brilliantly', 'Expertly', 'Superbly', 'Excellently', 'Sublimely', 'Alluringly', 'Exquisitely', 'Artfully'];
-// const verbs = ['Designed', 'Invented', 'Devised', 'Formulated', 'Calculated', 'Constructed', 'Fashioned', 'Created', 'Crafted'];
-// const nouns = ['Websites', 'Ideas', 'Web', 'Sites']
 
-// function chooseNewWord(array, element) {
-//     let rand = getRandomInt(array.length);
-//     gsap.to(element, {duration: 1, text: array[rand]});
-// }
+const lightbox = document.querySelector(".lightbox")
+let closeBtn = undefined;
+const portfolioItems = document.querySelectorAll(".portfolio__item");
+for (let item of portfolioItems) {
+    item.addEventListener('click', e => {
+        lightbox.insertAdjacentHTML('afterbegin', `${lightboxItems[item.id]}`)
+        lightbox.style.opacity = 1;
+        lightbox.classList.add('lightbox__active')
+        if(!closeBtn) {
+            closeBtn = document.querySelector(".lightbox__close-btn");
+            closeBtn.addEventListener('click', e => {
+                lightbox.style.opacity = 0;
+                console.log('worked!')
+                setTimeout(()=> lightbox.classList.remove('lightbox__active'), 400)
+                setTimeout(()=> document.querySelector(".lightbox__content").remove(), 500)
+                setTimeout(()=> closeBtn = undefined);
+            })
+        }
+    })
+}
 
-// const makeAdjective = () => chooseNewWord(adjectives, adjective);
-// const makeVerb = () => chooseNewWord(verbs, verb);
-// const makeNoun = () => chooseNewWord(nouns, noun);
-
-// const oneOfThree = [
-//     makeAdjective,
-//     makeVerb,
-//     makeNoun
-// ]
-
-// makeAdjective();
-// makeVerb();
-// makeNoun();
-
-// setInterval(() => {
-//     let rand = gsap.utils.random(0, 1, 1);
-//     oneOfThree[rand]();
-// }, 3000);

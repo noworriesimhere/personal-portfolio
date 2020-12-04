@@ -14,15 +14,15 @@
 <body>
     <div class="animation">
         <div class="animation__text">
-            <h4 class="animation__hide">
+            <p class="animation__hide">
                 <span class="text">Design | Development</span>
-            </h4>
-            <h4 class="animation__hide">
+            </p>
+            <p class="animation__hide">
                 <span class="text">Development | Design</span>
-            </h4>
-            <h4 class="animation__hide">
+            </p>
+            <p class="animation__hide">
                 <span class="text">Design | Development</span>
-            </h4>
+            </p>
 
         </div>
     </div>
@@ -64,12 +64,12 @@
         <h2 class="section__title section__title--services">What I do</h2>
         <div class="services">
             <div class="service">
-                <h3>Design & Development</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto deserunt eveniet quisquam magni, at voluptas, ab quasi sequi quaerat itaque ea nostrum mollitia praesentium consectetur nisi. Aut nobis velit qui!</p>
+                <h3>Design</h3>
+                <p>Keep your business image up to date and evolving with the latest design trends. Regardless of the mobile device, tablet, or desktop, your users will have the best experience possible.</p>
             </div>
             <div class="service">
-                <h3>E-Commerce</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis magnam natus ad iure atque cupiditate eveniet excepturi, harum saepe veniam necessitatibus pariatur et? Necessitatibus quod odit assumenda praesentium minima?</p>
+                <h3>Development</h3>
+                <p>Today's development tools are more robust than ever. Let's make use of both front end tools (HTML, CSS, Javascript, React) and back end tools (Node.js, Express, MongoDB) to keep powering your web apps.</p>
             </div>
         </div>
         <a href="#work" class="btn">My Work</a>
@@ -82,11 +82,12 @@
             <p class="section__subtitle section__subtitle--about">Web Designer and Developer</p>
     
             <div class="about-me__body">
-                <p>Lorem, ipsum dolor sit dolor in deserunt voluptatem illum at nulla sed, ullam, vitae nemo laudantium voluptate dolorem vero amet quos nostrum ipsum porro nam.</p>
-                
+                <p>
+                    Thanks for stopping by! I'm a highly self motivated web developer that's eager to help turn your ideas into reality. Have something in mind? Let's talk about it!
+                </p>
             </div>
     
-            <img srcset="./img/profilepic.JPG, ./img/profilepic-hires.JPG" alt="Alan outside his urban comfort zone" class="about-me__img">
+            <img srcset="./img/profilepic.JPG, ./img/profilepic-hires.JPG" alt="terribly unprofessional photo of Alan" class="about-me__img">
         </section>
     </div>
 
@@ -96,20 +97,22 @@
         <p class="section__subtitle section__subtitle--work">A sampling of my work</p>
 
         <div class="portfolio">
-            <a href="https://nyctraveltemplate.netlify.app" target="_blank" class="portfolio__item">
+            <div class="portfolio__item" id="lightbox__item1">
                 <img src="./img/portfolio-01.png" alt="" class="portfolio__img">
-            </a>
-            
-            <a href="https://createbakery.netlify.app/"  target="_blank" class="portfolio__item">
+            </div>
+            <div class="portfolio__item" id="lightbox__item2"">
                 <img src="./img/portfolio-02.png" alt="" class="portfolio__img">
-            </a>
-
+            </div>
+            <div class="portfolio__item" id="lightbox__item3"">
+                <img src="./img/portfolio-03.png" alt="" class="portfolio__img">
+            </div>
         </div>
     </section>
 
+    <div class="lightbox"></div>
     <!-- footer -->
     <footer class="footer">
-        <a href="mailto:contactalantran@gmail.com" class="footer__link">contactalantran@gmail.com</a>
+        <a href="mailto:contact@alantran.tech" class="footer__link">contact@alantran.tech</a>
         <ul class="social-list">
             <li class="social-list__item">
                 <a href="#" class="social-list__link"><i class="fab fa-github-square"></i></a>
@@ -118,10 +121,7 @@
                 <a href="#" class="social-list__link"><i class="fab fa-codepen"></i></a>
             </li>
             <li class="social-list__item">
-                <a href="#" class="social-list__link"><i class="fab fa-linkedin"></i></a>
-            </li>
-            <li class="social-list__item">
-                <a href="#" class="social-list__link"><i class="fab fa-instagram"></i></a>
+                <a href="https://nyctraveltemplate.netlify.app/" class="social-list__link"><i class="fab fa-linkedin"></i></a>
             </li>
         </ul>
     </footer>

@@ -27,7 +27,7 @@ class heroAnim {
         this.makeNoun();
         setInterval(() => {
             this.oneOfThree[gsap.utils.random(0, 1, 1)]();
-        }, 2000);
+        }, 1700);
     }
 
 }
