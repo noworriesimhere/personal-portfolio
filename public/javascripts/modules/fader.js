@@ -11,7 +11,7 @@ class Fader {
         
             if(window.pageYOffset > window.innerHeight) {
                 this.overlay.style.opacity = 1;
-            } else if (window.pageYOffset > window.innerHeight*.6) {
+            } else if (window.pageYOffset > window.innerHeight*.9) {
                 this.header.style.opacity = 1;
             } else {
                 this.overlay.style.opacity = rate*2;

@@ -36,8 +36,8 @@
     }
 
     &__content {
-        height: 80vh;
-        width: 35vh;
+        height: 85vh;
+        width: 45vh;
         background-color: rgb(var(--clr-secondary));
     }
 
