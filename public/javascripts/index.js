@@ -26,7 +26,7 @@ const lightboxItems = {
             <h3 class="lightbox__title">Travel Tours - Static Webpage</h3>
             <h4 class="lightbox__subtitle">HTML, CSS, Javascript, Bootstrap 4</h4>
             <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur accusantium tenetur veniam voluptates quos officiis recusandae modi aliquid consectetur, mollitia magnam nam cupiditate. Voluptatum, maiores consequatur ipsam eaque fuga porro!
+                A template to showcase parallax effects and changing backgrounds using the native Intersectional Observer API that comes out of the box with Javascript.
             </p>
             <a href="https://parallaxtemplate.vercel.app/" target="_blank" class="btn">Go to Site</a>
         </div>
@@ -42,7 +42,7 @@ const lightboxItems = {
         <h3 class="lightbox__title">Custom Cakes - Static Webpage</h3>
         <h4 class="lightbox__subtitle">HTML, PostCSS, Webpack, Javascript</h4>
         <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur accusantium tenetur veniam voluptates quos officiis recusandae modi aliquid consectetur, mollitia magnam nam cupiditate. Voluptatum, maiores consequatur ipsam eaque fuga porro!
+            A single page showcase for a small business. All scrolling animations are powered by the Intersectional Observer API. Development was aided by Webpack and Postcss to modularize and bundle all project files, so as to keep the project as neat and clean as possible.
         </p>
         <a href="https://createbakery.netlify.app/" target="_blank" class="btn">Go to Site</a>
     </div>

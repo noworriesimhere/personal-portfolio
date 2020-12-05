@@ -1,5 +1,5 @@
 .my-work {
-    background-color: rgb(var(--clr-secondary));
+    background-color: rgba(var(--clr-secondary), .8);
     color: rgb(var(--clr-primary));
     text-align: center;
 }
@@ -15,7 +15,8 @@
 .portfolio__item {
     background: rgb(var(--clr-accent));
     overflow: hidden;
-    max-width: 575px;
+    max-width: 500px;
+    margin: 1rem;
 }
 
 .portfolio__img {

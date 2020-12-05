@@ -26,6 +26,5 @@
 
 .section__subtitle--work {
     color: rgb(var(--clr-accent));
-    font-weight: var(--fw-bold);
     margin-bottom: 2em;
 }

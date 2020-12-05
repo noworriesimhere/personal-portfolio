@@ -1,5 +1,5 @@
 .my-services {
-    background-color: rgb(var(--clr-secondary));
+    background-color: rgba(var(--clr-secondary), .9);
     color: rgb(var(--clr-primary));
     height: 100vh;
     display: flex;
