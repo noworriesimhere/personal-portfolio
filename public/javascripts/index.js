@@ -29,6 +29,7 @@ const lightboxItems = {
                 A template to showcase parallax effects and changing backgrounds using the native Intersectional Observer API that comes out of the box with Javascript.
             </p>
             <a href="https://parallaxtemplate.vercel.app/" target="_blank" class="btn">Go to Site</a>
+            <a href="https://github.com/noworriesimhere/parallaxtemplate" target="_blank" class="btn">Go to Github Repository</a>
         </div>
     </div>
     `,
@@ -45,25 +46,43 @@ const lightboxItems = {
             A single page showcase for a small business. All scrolling animations are powered by the Intersectional Observer API. Development was aided by Webpack and Postcss to modularize and bundle all project files, so as to keep the project as neat and clean as possible.
         </p>
         <a href="https://createbakery.netlify.app/" target="_blank" class="btn">Go to Site</a>
+        <a href="https://github.com/noworriesimhere/yelpcamp" target="_blank" class="btn">Go to Github Repository</a>
     </div>
 </div>
     `,
     lightbox__item3: `
     <div class="lightbox__content">
+        <i class="fas fa-times-circle lightbox__close-btn fa-3x"></i>
+        <div class="lightbox__picture">
+            <img src="./img/portfolio-03.png" alt="">
+        </div>
+        <div class="lightbox__description">
+            <h3 class="lightbox__title">YelpCamp - Web App</h3>
+            <h4 class="lightbox__subtitle">HTML, Bootstrap 5, Javascript, Node.js, Express, MongoDB</h4>
+            <p>
+                A full web app with both front end (HTML, Bootstrap, Javascript) and a back end server and database (Node.js, Express, MongoDB). Has full CRUD functionality (Create, Read, Update, Delete) and follows RESTful (ReprEsentational State Transfer) conventions.
+            </p>
+            <p>
+                Includes authentication and authorization powered by Passportjs and map support powered by the Mapbox API.
+            </p>
+            <a href="https://vast-savannah-21694.herokuapp.com/campgrounds" target="_blank" class="btn">Go to Site</a>
+            <a href="https://github.com/noworriesimhere/yelpcamp" target="_blank" class="btn">Go to Github Repository</a>
+        </div>
+    </div>
+    `,
+    lightbox__item4: `
+    <div class="lightbox__content">
     <i class="fas fa-times-circle lightbox__close-btn fa-3x"></i>
     <div class="lightbox__picture">
-        <img src="./img/portfolio-03.png" alt="">
+        <img src="./img/portfolio-04.png" alt="">
     </div>
     <div class="lightbox__description">
-        <h3 class="lightbox__title">YelpCamp - Web App</h3>
-        <h4 class="lightbox__subtitle">HTML, Bootstrap 5, Javscript, Node.js, Express, MongoDB</h4>
+        <h3 class="lightbox__title">Personal Portfolio - Static Page</h3>
+        <h4 class="lightbox__subtitle">HTML, PostCSS, Javascript, Webpack</h4>
         <p>
-            A full web app with both front end (HTML, Bootstrap, Javascript) and a back end server and database (Node.js, Express, MongoDB). Has full CRUD functionality (Create, read, update, delete) and follows RESTful (Representational state transfer) conventions.
+            The site that you are currently on. Animations are mainly done using the popular GSAP animation library, while scroll effects are achieved by event listeners.
         </p>
-        <p>
-            Includes authentication and authorization powered by Passportjs and map support powered by the Mapbox API.
-        </p>
-        <a href="https://vast-savannah-21694.herokuapp.com/campgrounds" target="_blank" class="btn">Go to Site</a>
+        <a href="https://github.com/noworriesimhere/personal-portfolio" target="_blank" class="btn">Go to Github Repository</a>
     </div>
 </div>
     `

@@ -11,6 +11,7 @@
     font-weight: var(--fw-bold);
     transition: transform 200ms ease-in-out;
     border: none;
+    margin-bottom: 1rem;;
 }
 
 .btn:hover {
