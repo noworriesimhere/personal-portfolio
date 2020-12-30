@@ -2,21 +2,20 @@ import '../stylesheets/styles.css';
 
 import Navbar from './modules/navbar';
 import Fader from './modules/fader';
-import IntroAnim from './modules/introAnim'
+import IntroAnim from './modules/introAnim';
 import HeroAnim from './modules/heroAnim';
 
-
-let navbar = new Navbar;
-let fader = new Fader;
-let introAnim = new IntroAnim;
-let heroAnim = new HeroAnim;
+let navbar = new Navbar();
+let fader = new Fader();
+let introAnim = new IntroAnim();
+let heroAnim = new HeroAnim();
 
 if (module.hot) {
-    module.hot.accept()
+  module.hot.accept();
 }
 
 const lightboxItems = {
-    lightbox__item1 : `
+  lightbox__item1: `
     <div class="lightbox__content">
         <i class="fas fa-times-circle lightbox__close-btn fa-3x"></i>
         <div class="lightbox__picture">
@@ -33,7 +32,7 @@ const lightboxItems = {
         </div>
     </div>
     `,
-    lightbox__item2 : `
+  lightbox__item2: `
     <div class="lightbox__content">
     <i class="fas fa-times-circle lightbox__close-btn fa-3x"></i>
     <div class="lightbox__picture">
@@ -50,7 +49,7 @@ const lightboxItems = {
     </div>
 </div>
     `,
-    lightbox__item3: `
+  lightbox__item3: `
     <div class="lightbox__content">
         <i class="fas fa-times-circle lightbox__close-btn fa-3x"></i>
         <div class="lightbox__picture">
@@ -65,49 +64,66 @@ const lightboxItems = {
             <p>
                 Includes authentication and authorization powered by Passportjs and map support powered by the Mapbox API.
             </p>
-            <a href="https://vast-savannah-21694.herokuapp.com/campgrounds" target="_blank" class="btn">Go to Site</a>
+            <a href="https://vast-savannah-21694.herokuapp.com/" target="_blank" class="btn">Go to Site</a>
             <a href="https://github.com/noworriesimhere/yelpcamp" target="_blank" class="btn">Go to Github Repository</a>
         </div>
     </div>
     `,
-    lightbox__item4: `
+  lightbox__item4: `
     <div class="lightbox__content">
-    <i class="fas fa-times-circle lightbox__close-btn fa-3x"></i>
-    <div class="lightbox__picture">
-        <img src="./img/portfolio-04.png" alt="">
+        <i class="fas fa-times-circle lightbox__close-btn fa-3x"></i>
+        <div class="lightbox__picture">
+            <img src="./img/portfolio-04.png" alt="">
+        </div>
+        <div class="lightbox__description">
+            <h3 class="lightbox__title">Personal Portfolio - Static Page</h3>
+            <h4 class="lightbox__subtitle">HTML, PostCSS, Javascript, Webpack</h4>
+            <p>
+                The site that you are currently on. Animations are mainly done using the popular GSAP animation library, while scroll effects are achieved by event listeners.
+            </p>
+            <a href="https://github.com/noworriesimhere/personal-portfolio" target="_blank" class="btn">Go to Github Repository</a>
+        </div>
     </div>
-    <div class="lightbox__description">
-        <h3 class="lightbox__title">Personal Portfolio - Static Page</h3>
-        <h4 class="lightbox__subtitle">HTML, PostCSS, Javascript, Webpack</h4>
-        <p>
-            The site that you are currently on. Animations are mainly done using the popular GSAP animation library, while scroll effects are achieved by event listeners.
-        </p>
-        <a href="https://github.com/noworriesimhere/personal-portfolio" target="_blank" class="btn">Go to Github Repository</a>
+    `,
+  lightbox__item5: `
+    <div class="lightbox__content">
+        <i class="fas fa-times-circle lightbox__close-btn fa-3x"></i>
+        <div class="lightbox__picture">
+            <img src="./img/portfolio-05.jpg" alt="">
+        </div>
+        <div class="lightbox__description">
+            <h3 class="lightbox__title">Sample Company Site - Static Page with React</h3>
+            <h4 class="lightbox__subtitle">React with Create React App</h4>
+            <p>
+                A front end static page rendered by React components.
+            </p>
+            <a href="https://alantranbusiness.netlify.app/" target="_blank" class="btn">Go to Site</a>
+            <a href="https://github.com/noworriesimhere/personal-portfolio" target="_blank" class="btn">Go to Github Repository</a>
+        </div>
     </div>
-</div>
-    `
-}
+    `,
+};
 
-
-
-const lightbox = document.querySelector(".lightbox")
+const lightbox = document.querySelector('.lightbox');
 let closeBtn = undefined;
-const portfolioItems = document.querySelectorAll(".portfolio__item");
+const portfolioItems = document.querySelectorAll('.portfolio__item');
 for (let item of portfolioItems) {
-    item.addEventListener('click', e => {
-        lightbox.insertAdjacentHTML('afterbegin', `${lightboxItems[item.id]}`)
-        lightbox.style.opacity = 1;
-        lightbox.classList.add('lightbox__active')
-        if(!closeBtn) {
-            closeBtn = document.querySelector(".lightbox__close-btn");
-            closeBtn.addEventListener('click', e => {
-                lightbox.style.opacity = 0;
-                console.log('worked!')
-                setTimeout(()=> lightbox.classList.remove('lightbox__active'), 400)
-                setTimeout(()=> document.querySelector(".lightbox__content").remove(), 500)
-                setTimeout(()=> closeBtn = undefined);
-            })
-        }
-    })
+  item.addEventListener('click', (e) => {
+    lightbox.insertAdjacentHTML('afterbegin', `${lightboxItems[item.id]}`);
+    lightbox.style.opacity = 1;
+    lightbox.classList.add('lightbox__active');
+    if (!closeBtn) {
+      closeBtn = document.querySelector('.lightbox__close-btn');
+      closeBtn.addEventListener('click', (e) => {
+        lightbox.style.opacity = 0;
+        console.log('worked!');
+        setTimeout(() => lightbox.classList.remove('lightbox__active'), 400);
+        setTimeout(
+          () => document.querySelector('.lightbox__content').remove(),
+          500
+        );
+        setTimeout(() => (closeBtn = undefined));
+      });
+    }
+  });
 }
-
