@@ -50,7 +50,7 @@ if (currentTask === 'dev') {
     },
     contentBase: path.join(__dirname, 'public'),
     hot: true,
-    port: 4000,
+    port: 4001,
     host: '0.0.0.0'
   }
   config.mode = 'development'

@@ -9,6 +9,7 @@
 
     @mixin atSmall {
         text-align: center;
+        height: 60vh;
     }
 }
 
@@ -36,8 +37,9 @@
 }
 
 .service {
-    max-width: 500px;
+    max-width: 400px;
     margin: 0 auto;
+    
 }
 
 @media (min-width: 800px) {

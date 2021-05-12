@@ -19,7 +19,7 @@ const lightboxItems = {
     <div class="lightbox__content">
         <i class="fas fa-times-circle lightbox__close-btn fa-3x"></i>
         <div class="lightbox__picture">
-            <img src="./img/portfolio-01.png" alt="">
+            <img src="./img/portfolio-city.png" alt="city tours site">
         </div>
         <div class="lightbox__description">
             <h3 class="lightbox__title">Travel Tours - Static Webpage</h3>
@@ -28,7 +28,6 @@ const lightboxItems = {
                 A template to showcase parallax effects and changing backgrounds using the native Intersectional Observer API that comes out of the box with Javascript.
             </p>
             <a href="https://parallaxtemplate.vercel.app/" target="_blank" class="btn">Go to Site</a>
-            <a href="https://github.com/noworriesimhere/parallaxtemplate" target="_blank" class="btn">Go to Github Repository</a>
         </div>
     </div>
     `,
@@ -36,7 +35,7 @@ const lightboxItems = {
     <div class="lightbox__content">
     <i class="fas fa-times-circle lightbox__close-btn fa-3x"></i>
     <div class="lightbox__picture">
-        <img src="./img/portfolio-02.png" alt="">
+        <img src="./img/portfolio-baking.png" alt="Bakery Site">
     </div>
     <div class="lightbox__description">
         <h3 class="lightbox__title">Custom Cakes - Static Webpage</h3>
@@ -45,7 +44,6 @@ const lightboxItems = {
             A single page showcase for a small business. All scrolling animations are powered by the Intersectional Observer API. Development was aided by Webpack and Postcss to modularize and bundle all project files, so as to keep the project as neat and clean as possible.
         </p>
         <a href="https://createbakery.netlify.app/" target="_blank" class="btn">Go to Site</a>
-        <a href="https://github.com/noworriesimhere/yelpcamp" target="_blank" class="btn">Go to Github Repository</a>
     </div>
 </div>
     `,
@@ -53,19 +51,18 @@ const lightboxItems = {
     <div class="lightbox__content">
         <i class="fas fa-times-circle lightbox__close-btn fa-3x"></i>
         <div class="lightbox__picture">
-            <img src="./img/portfolio-03.png" alt="">
+            <img src="./img/portfolio-wedding.png" alt="Wedding Site">
         </div>
         <div class="lightbox__description">
-            <h3 class="lightbox__title">YelpCamp - Web App</h3>
-            <h4 class="lightbox__subtitle">HTML, Bootstrap 5, Javascript, Node.js, Express, MongoDB</h4>
+            <h3 class="lightbox__title">Wedding Event - Web App</h3>
+            <h4 class="lightbox__subtitle">HTML, CSS, Javascript, React, Firebase</h4>
             <p>
-                A full web app with both front end (HTML, Bootstrap, Javascript) and a back end server and database (Node.js, Express, MongoDB). Has full CRUD functionality (Create, Read, Update, Delete) and follows RESTful (ReprEsentational State Transfer) conventions.
+                A personal website for my upcoming wedding! The style of the web app is designed with horizontal scrolling on most views. 
             </p>
             <p>
-                Includes authentication and authorization powered by Passportjs and map support powered by the Mapbox API.
+                The popular framework React was used to put this together.
             </p>
-            <a href="https://vast-savannah-21694.herokuapp.com/" target="_blank" class="btn">Go to Site</a>
-            <a href="https://github.com/noworriesimhere/yelpcamp" target="_blank" class="btn">Go to Github Repository</a>
+            <a href="alanlovesgeorgia.wedding" target="_blank" class="btn">Go to Site</a>
         </div>
     </div>
     `,
@@ -73,15 +70,15 @@ const lightboxItems = {
     <div class="lightbox__content">
         <i class="fas fa-times-circle lightbox__close-btn fa-3x"></i>
         <div class="lightbox__picture">
-            <img src="./img/portfolio-04.png" alt="">
+            <img src="./img/portfolio-portfolio.png" alt="Other Portfolio">
         </div>
         <div class="lightbox__description">
-            <h3 class="lightbox__title">Personal Portfolio - Static Page</h3>
-            <h4 class="lightbox__subtitle">HTML, PostCSS, Javascript, Webpack</h4>
+            <h3 class="lightbox__title">Tech Portfolio - Single Page App</h3>
+            <h4 class="lightbox__subtitle">Next.js, HTML, CSS, Javascript</h4>
             <p>
-                The site that you are currently on. Animations are mainly done using the popular GSAP animation library, while scroll effects are achieved by event listeners.
+              My other portfolio site, which is more geared toward technical talk and what I use in my programming.
             </p>
-            <a href="https://github.com/noworriesimhere/personal-portfolio" target="_blank" class="btn">Go to Github Repository</a>
+            <a href="https://second-portfolio-liart.vercel.app" target="_blank" class="btn">Go to Site</a>
         </div>
     </div>
     `,
@@ -89,16 +86,15 @@ const lightboxItems = {
     <div class="lightbox__content">
         <i class="fas fa-times-circle lightbox__close-btn fa-3x"></i>
         <div class="lightbox__picture">
-            <img src="./img/portfolio-05.jpg" alt="">
+            <img src="./img/portfolio-califashion.png" alt="Clothing Store">
         </div>
         <div class="lightbox__description">
-            <h3 class="lightbox__title">Sample Company Site - Static Page with React</h3>
-            <h4 class="lightbox__subtitle">React with Create React App</h4>
+            <h3 class="lightbox__title">Clothing Store - WordPress</h3>
+            <h4 class="lightbox__subtitle">Wordpress, Elementor, WooCommerce</h4>
             <p>
-                A front end static page rendered by React components.
+                An ecommerce store for a small clothing business.
             </p>
-            <a href="https://alantranbusiness.netlify.app/" target="_blank" class="btn">Go to Site</a>
-            <a href="https://github.com/noworriesimhere/personal-portfolio" target="_blank" class="btn">Go to Github Repository</a>
+            <a href="https://californiafashion.net/" target="_blank" class="btn">Go to Site</a>
         </div>
     </div>
     `,

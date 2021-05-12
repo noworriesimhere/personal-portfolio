@@ -9,7 +9,7 @@ class heroAnim {
         this.noun = document.querySelector(".intro__text--noun");
         this.adjectives = ['Beautifully', 'Immaculately', 'Brilliantly', 'Expertly', 'Superbly', 'Excellently', 'Sublimely', 'Alluringly', 'Exquisitely', 'Artfully'];
         this.verbs = ['Designed', 'Invented', 'Devised', 'Formulated', 'Calculated', 'Constructed', 'Fashioned', 'Created', 'Crafted'];
-        this.nouns = ['Websites', 'Ideas', 'Web', 'Sites'];
+        this.nouns = ['Websites', 'Ideas', 'Pages', 'Sites'];
         function chooseNewWord(array, element) {
             let rand = Math.floor(gsap.utils.random(0, array.length));
             gsap.to(element, {duration: 1, text: array[rand]});

@@ -44,40 +44,44 @@
     }
 
     &__text {
-        font-size: 2.8rem;
+        font-size: 3.5rem;
         font-weight: var(--fw-reg);
         margin-bottom: 3rem;
         transform: translateY(-20%);
         opacity: 0;
 
         @mixin atSmall {
-            font-size: 4.3rem;
+            font-size: 5.5rem;
         }
     
         @mixin atMedium {
-            font-size: 3.5rem;
+            font-size: 7rem;
         }
 
         @mixin atLarge {
-            font-size: 4.5rem;
+            font-size: 8rem;
         }
     }
 
     &__text span {
         display: block;
-
+        
         @mixin atSmall {
-            text-align: center;
+            padding-left: 10rem;
+            width: 100vw;
         }
-        @mixin atMedium {
-            display: inline;
-        }
+  
     }
 
     &__button {
         color: var(--clr-primary);
         align-self: flex-start;
         opacity: 0;
+
+
+        @mixin atSmall {
+            padding-left: 8rem;
+        }
         
         &:focus {
             border: 8px rgb(var(--clr-accent)) solid;
@@ -85,9 +89,6 @@
             outline: none;
         }
 
-        @mixin atSmall {
-            align-self: center;
-        }
     }
 }
 
