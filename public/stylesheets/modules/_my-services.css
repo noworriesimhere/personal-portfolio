@@ -1,16 +1,11 @@
 .my-services {
     background-color: rgba(var(--clr-secondary), .9);
     color: rgb(var(--clr-primary));
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    @mixin atSmall {
-        text-align: center;
-        height: 60vh;
-    }
 }
 
 .section__title--services {
@@ -37,9 +32,9 @@
 }
 
 .service {
-    max-width: 400px;
+    max-width: 300px;
     margin: 0 auto;
-    
+    width: 300px;
 }
 
 @media (min-width: 800px) {

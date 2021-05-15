@@ -12,6 +12,7 @@
     align-items: center;
     transition: opacity .35s ease-in-out;
     
+    
 
     &__close-btn {
         position: absolute;
@@ -19,8 +20,14 @@
         color: rgb(var(--clr-accent));
         z-index: 600;
         background-color: rgb(var(--clr-secondary));
-        border-radius: 50%;
-        transition: all .5s ease-in-out;
+        transition: all .25s ease-in-out;
+        padding: 0 .25rem;
+        border-radius: .5rem;
+
+        @mixin atSmall {
+            color: white;
+            background-color: rgb(var(--clr-primary));
+        }
     }
 
     &__close-btn:hover {
@@ -37,8 +44,14 @@
 
     &__content {
         height: 85vh;
-        width: 45vh;
+        max-height: 800px;
+        width: 90vw;
+        max-width: 400px;
         background-color: rgb(var(--clr-secondary));
+
+        @mixin atSmall {
+            width: 45vh;
+        }
     }
 
     &__picture {
@@ -54,7 +67,7 @@
     &__description {
         color: rgb(var(--clr-primary));
         height: 65%;
-        padding: .5rem;
+        padding: 2rem 3.5rem;
         overflow: scroll;
 
         @mixin atMedium {
@@ -74,4 +87,39 @@
         margin-bottom: 2rem;
     }
 
+    &__left, &__right {
+        position: absolute;
+        top:0;
+        color: rgb(var(--clr-accent));
+        transition: all .25s ease-in-out;
+    }
+
+    &__left {
+        transform: translate(5px, 450px); 
+        @mixin atSmall {
+            transform: translate(-50px, 450px);
+            color: white;
+        }
+    }
+    &__right {
+        right:0;
+        transform: translate(-25px, 450px);
+        @mixin atSmall {
+            right: unset;
+            transform: translate(415px, 450px);
+            color: white;
+        }
+    }
+
+    &__left:hover, &__right:hover {
+        cursor: pointer;
+    }
+
+}
+
+.fas {
+    transition: all .25s ease-in-out;
+    &:hover {
+        transform: scale(1.2);
+    }
 }

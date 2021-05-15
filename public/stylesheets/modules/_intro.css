@@ -1,6 +1,7 @@
 .intro {
     border-top: solid 2px rgb(var(--clr-secondary));
     height: 100vh;
+    overflow-x: hidden;
 
     &__fullscreen-video-wrap {
         position: fixed;
