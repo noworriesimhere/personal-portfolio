@@ -48,6 +48,8 @@
         width: 90vw;
         max-width: 400px;
         background-color: rgb(var(--clr-secondary));
+        transition: all .15s ease-in-out;
+        opacity: 0;
 
         @mixin atSmall {
             width: 45vh;
@@ -89,27 +91,42 @@
 
     &__left, &__right {
         position: absolute;
-        top:0;
+        top:50%;
         color: rgb(var(--clr-accent));
         transition: all .25s ease-in-out;
+        @mixin atSmall {
+            color: white;
+        }
     }
 
     &__left {
-        transform: translate(5px, 450px); 
+        left: 30px;
+
         @mixin atSmall {
-            transform: translate(-50px, 450px);
-            color: white;
+            left:15%;
+        }
+
+        @mixin atMedium {
+            left: 20%;
+        }
+        @mixin atLarge {
+            left: 30%;
         }
     }
+
     &__right {
-        right:0;
-        transform: translate(-25px, 450px);
+        right: 30px;
         @mixin atSmall {
-            right: unset;
-            transform: translate(415px, 450px);
-            color: white;
+            right:15%;
+        }
+        @mixin atMedium {
+            right: 20%;
+        }
+        @mixin atLarge {
+            right: 30%;
         }
     }
+
 
     &__left:hover, &__right:hover {
         cursor: pointer;
