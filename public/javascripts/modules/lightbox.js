@@ -35,7 +35,7 @@ class Lightbox {
       this.leftButton.style.display = 'none'
     }
 
-    this.leftButton.addEventListener('click', (e) => { 
+    this.leftButton.addEventListener('click', ({target}) => { 
       this.closeThat();
       setTimeout(() => {
         this.openThatTrash(previous);
@@ -47,8 +47,8 @@ class Lightbox {
     if (!next) {
       this.rightButton.style.display = 'none'
     }
-      this.rightButton.addEventListener('click', (e) => {
-      this.closeThat();
+      this.rightButton.addEventListener('click', ({target}) => {
+      this.closeThat(target);
       setTimeout(() => {
         this.openThatTrash(next);
       }, 250)
@@ -76,7 +76,9 @@ class Lightbox {
       this.lightbox.style.opacity = 0;
       setTimeout(() => this.lightbox.classList.remove('lightbox__active'), 200);
     } 
+    
     document.querySelector('body').style.overflow = 'unset';
+
     setTimeout(
       () => document.querySelector('.lightbox__content').style.opacity = 0,
       60
@@ -85,11 +87,9 @@ class Lightbox {
       () => document.querySelector('.lightbox__content').remove(),
       210
     );
-    this.closeBtn.replaceWith(this.closeBtn.cloneNode(true))
+
     this.closeBtn = undefined;
-    this.leftButton.replaceWith(this.leftButton.cloneNode(true))
     this.leftButton = undefined;
-    this.rightButton.replaceWith(this.rightButton.cloneNode(true))
     this.rightButton = undefined;
   }
   
