@@ -81,7 +81,7 @@
 
 
         @mixin atSmall {
-            padding-left: 8rem;
+            margin-left: 8rem;
         }
         
         &:focus {

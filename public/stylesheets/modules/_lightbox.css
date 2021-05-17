@@ -17,17 +17,13 @@
     &__close-btn {
         position: absolute;
         margin: 1rem 1rem;
-        color: rgb(var(--clr-accent));
         z-index: 600;
-        background-color: rgb(var(--clr-secondary));
+        color: white;
+        background-color: rgb(var(--clr-primary));
         transition: all .25s ease-in-out;
         padding: 0 .25rem;
         border-radius: .5rem;
 
-        @mixin atSmall {
-            color: white;
-            background-color: rgb(var(--clr-primary));
-        }
     }
 
     &__close-btn:hover {
@@ -45,17 +41,18 @@
     &__content {
         height: 85vh;
         border-radius: 2rem;
-        max-height: 800px;
+        max-height: 550px;
         width: 90vw;
         max-width: 400px;
         background-color: rgb(var(--clr-secondary));
-        transition: all .15s ease-in-out;
+        transition: all .5s ease-in-out;
         opacity: 0;
 
 
 
         @mixin atSmall {
             width: 45vh;
+            max-height: 800px;
         }
 
 
@@ -117,17 +114,36 @@
         position: absolute;
         top:50%;
         color: rgb(var(--clr-accent));
-        transition: all .25s ease-in-out;
+        display: none;
         @mixin atSmall {
             color: white;
+            display: block;
         }
     }
 
+    &__up, &__down {
+        position: absolute;
+        color: rgb(var(--clr-accent));
+        color: white;
+        @mixin atSmall {
+            visibility: hidden;
+        }
+    }
+
+    &__up {
+        top:5%;
+    }
+
+    &__down {
+        bottom:5%;
+    }
+
     &__left {
-        left: 30px;
+        visibility: hidden;
 
         @mixin atSmall {
             left:15%;
+            visibility: visible;
         }
 
         @mixin atMedium {
@@ -139,8 +155,9 @@
     }
 
     &__right {
-        right: 30px;
+        visibility: hidden;
         @mixin atSmall {
+            visibility: visible;
             right:15%;
         }
         @mixin atMedium {
@@ -152,15 +169,14 @@
     }
 
 
-    &__left:hover, &__right:hover {
-        cursor: pointer;
-    }
+
 
 }
 
 .fas {
     transition: all .25s ease-in-out;
     &:hover {
+        cursor: pointer;
         transform: scale(1.2);
     }
 }

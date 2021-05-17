@@ -5,8 +5,8 @@ class Lightbox {
     this.lightbox = document.querySelector('.lightbox');
     this.closeBtn = undefined;
     this.portfolioItems = document.querySelectorAll('.portfolio__item');
-    this.leftButton = document.querySelector('.lightbox__left');
-    this.rightButton = document.querySelector('.lightbox__right');
+    this.prevButton = window.innerWidth > 600 ? document.querySelector('.lightbox__left') : document.querySelector('.lightbox__up');
+    this.nextButton = window.innerWidth > 600 ? document.querySelector('.lightbox__right') : document.querySelector('.lightbox__down');
     this.previous;
     this.next;
     this.events();
@@ -34,12 +34,12 @@ class Lightbox {
 
     
     if (!this.previous) {
-      this.leftButton.style.display = 'none'
+      this.prevButton.style.display = 'none'
     } else {
-      this.leftButton.style.display = 'unset'
+      this.prevButton.style.display = 'unset'
     }
 
-    this.leftButton.addEventListener('click', ({target}) => { 
+    this.prevButton.addEventListener('click', ({target}) => { 
       this.closeThat();
       setTimeout(() => {
         this.openThatTrash(this.previous);
@@ -49,12 +49,12 @@ class Lightbox {
   
 
     if (!this.next) {
-      this.rightButton.style.display = 'none'
+      this.nextButton.style.display = 'none'
     } else {
-      this.rightButton.style.display = 'unset'
+      this.nextButton.style.display = 'unset'
     }
     
-    this.rightButton.addEventListener('click', ({target}) => {
+    this.nextButton.addEventListener('click', ({target}) => {
       this.closeThat(target);
       setTimeout(() => {
         this.openThatTrash(this.next);
@@ -97,11 +97,11 @@ class Lightbox {
 
     this.closeBtn = undefined;
     
-    this.leftButton.replaceWith(this.leftButton.cloneNode(true));
-    this.rightButton.replaceWith(this.rightButton.cloneNode(true));
+    this.prevButton.replaceWith(this.prevButton.cloneNode(true));
+    this.nextButton.replaceWith(this.nextButton.cloneNode(true));
 
-    this.leftButton = document.querySelector('.lightbox__left');
-    this.rightButton = document.querySelector('.lightbox__right');
+    this.prevButton = window.innerWidth > 600 ? document.querySelector('.lightbox__left') : document.querySelector('.lightbox__up');
+    this.nextButton = window.innerWidth > 600 ? document.querySelector('.lightbox__right') : document.querySelector('.lightbox__down');
   }
   
 }
