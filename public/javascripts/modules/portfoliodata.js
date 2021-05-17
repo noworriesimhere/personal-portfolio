@@ -21,7 +21,7 @@ const items = [
     title: 'Wedding Event',
     subtitle: 'Single page React, Firebase',
     description: 'A personal website for my upcoming wedding! The style of the web app is designed with horizontal scrolling on most views.',
-    link: 'https://createbakery.netlify.app/'
+    link: 'https://wedding-project-f3ecc.web.app/'
   },
   {
     imgSrc: './img/portfolio-portfolio.png',

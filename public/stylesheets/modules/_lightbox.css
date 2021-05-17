@@ -45,9 +45,8 @@
         width: 90vw;
         max-width: 400px;
         background-color: rgb(var(--clr-secondary));
-        transition: all .5s ease-in-out;
+        transition: all .25s ease-in-out;
         opacity: 0;
-
 
 
         @mixin atSmall {
