@@ -65,13 +65,7 @@ const spitOutObject = (items) => {
             <p>${item.description}</p>
             <a href="${item.link}" target="_blank" class="btn">Go to Site</a>
         </div>
-        <div class="lightbox__left">
-          <i class="fas fa-chevron-left fa-3x"></i>
-        </div>
-        <div class="lightbox__right">
-          <i class="fas fa-chevron-right fa-3x"></i>
-        </div>
-    </div>
+      </div>
     `
   })
   return finalObject;

@@ -5,8 +5,10 @@ class Lightbox {
     this.lightbox = document.querySelector('.lightbox');
     this.closeBtn = undefined;
     this.portfolioItems = document.querySelectorAll('.portfolio__item');
-    this.rightButton;
-    this.leftButton;
+    this.leftButton = document.querySelector('.lightbox__left');
+    this.rightButton = document.querySelector('.lightbox__right');
+    this.previous;
+    this.next;
     this.events();
     this.closeInBackground();
   }
@@ -21,8 +23,8 @@ class Lightbox {
   }
 
   openThatTrash(item) {
-    const previous = item.previousElementSibling;
-    const next = item.nextElementSibling;
+    this.previous = item.previousElementSibling;
+    this.next = item.nextElementSibling;
     document.querySelector('body').style.overflow = 'hidden';
     this.lightbox.insertAdjacentHTML('afterbegin', `${lightboxItems[item.id]}`);
     this.lightbox.style.opacity = 1;
@@ -30,27 +32,32 @@ class Lightbox {
     
     setTimeout(() => document.querySelector('.lightbox__content').style.opacity = 1, 150)
 
-    this.leftButton = document.querySelector('.lightbox__left');
-    if (!previous) {
+    
+    if (!this.previous) {
       this.leftButton.style.display = 'none'
+    } else {
+      this.leftButton.style.display = 'unset'
     }
 
     this.leftButton.addEventListener('click', ({target}) => { 
       this.closeThat();
       setTimeout(() => {
-        this.openThatTrash(previous);
+        this.openThatTrash(this.previous);
       }, 250)
     })
     
   
-    this.rightButton = document.querySelector('.lightbox__right');
-    if (!next) {
+
+    if (!this.next) {
       this.rightButton.style.display = 'none'
+    } else {
+      this.rightButton.style.display = 'unset'
     }
-      this.rightButton.addEventListener('click', ({target}) => {
+    
+    this.rightButton.addEventListener('click', ({target}) => {
       this.closeThat(target);
       setTimeout(() => {
-        this.openThatTrash(next);
+        this.openThatTrash(this.next);
       }, 250)
     })
     
@@ -59,7 +66,6 @@ class Lightbox {
       this.closeBtn = document.querySelector('.lightbox__close-btn');
       this.closeBtn.addEventListener('click', ({target}) => {
         this.closeThat(target.className);
-
       });
     }
   }
@@ -83,14 +89,19 @@ class Lightbox {
       () => document.querySelector('.lightbox__content').style.opacity = 0,
       60
     );
-    setTimeout(
-      () => document.querySelector('.lightbox__content').remove(),
+    setTimeout(() => {
+      document.querySelector('.lightbox__content').remove();
+    },
       210
     );
 
     this.closeBtn = undefined;
-    this.leftButton = undefined;
-    this.rightButton = undefined;
+    
+    this.leftButton.replaceWith(this.leftButton.cloneNode(true));
+    this.rightButton.replaceWith(this.rightButton.cloneNode(true));
+
+    this.leftButton = document.querySelector('.lightbox__left');
+    this.rightButton = document.querySelector('.lightbox__right');
   }
   
 }
