@@ -47,6 +47,14 @@ const items = [
     description: `An ecommerce store for a small clothing business.`,
     link: 'https://californiafashion.net'
   },
+  {
+    imgSrc: './img/portfolio-florist.png',
+    imgSrcAlt: 'Something Blooms Floristry',
+    title: 'Something Blooms',
+    subtitle: `Single Page App with Vue 3`,
+    description: `A florist's personal portfolio showcasing her work. The whole site is set up as a Single Page Application, which means maximum responsiveness and app-like interactivity`,
+    link: 'https://somethingblooms.florist'
+  },
   
 ]
 
