@@ -1,59 +1,19 @@
 const items = [
   {
-    imgSrc: './img/portfolio-city.png',
-    imgSrcAlt: 'city tours site',
-    title: 'Travel Tours - Static Webpage',
-    subtitle: 'HTML, CSS, Javascript, Bootstrap 4',
-    description: 'A template to showcase parallax effects and changing backgrounds using the native Intersectional Observer API that comes out of the box with Javascript.',
-    link: 'https://parallaxtemplate.vercel.app/'
-  },
-  {
-    imgSrc: './img/portfolio-baking.png',
-    imgSrcAlt: 'bakery site',
-    title: 'Custom Cakes - Static Webpage',
-    subtitle: 'HTML, PostCSS, Webpack, Javascript',
-    description: 'A single page showcase for a small business. All scrolling animations are powered by the Intersectional Observer API. Development was aided by Webpack and Postcss to modularize and bundle all project files, so as to keep the project as neat and clean as possible.',
-    link: 'https://createbakery.netlify.app/'
-  },
-  {
-    imgSrc: './img/portfolio-wedding.png',
-    imgSrcAlt: 'wedding site',
-    title: 'Wedding Event',
-    subtitle: 'Single page React, Firebase',
-    description: 'A personal website for my upcoming wedding! The style of the web app is designed with horizontal scrolling on most views.',
-    link: 'https://wedding-project-f3ecc.web.app/'
-  },
-  {
-    imgSrc: './img/portfolio-portfolio.png',
-    imgSrcAlt: 'portfolio site',
-    title: 'Tech Portfolio',
-    subtitle: 'Single Page Application with Next.js',
-    description: 'My other portfolio site, which is more geared toward technical talk and what I use in my programming.',
-    link: 'https://alantran.vercel.app'
-  },
-  {
     imgSrc: './img/portfolio-greenink.png',
     imgSrcAlt: 'Green Ink',
     title: 'Green Ink Communications',
-    subtitle: 'Business Website with WordPress and PHP',
+    subtitle: 'WordPress and PHP',
     description: `A business focused on video production for clients. <br> I was able to help them maintain their WordPress site's front and back end. Custom CSS was added to tweak an existing WordPress theme for a more professional look.`,
     link: 'https://greenink.us.com'
   },
   {
-    imgSrc: './img/portfolio-califashion.png',
-    imgSrcAlt: 'California Fashion',
-    title: 'California Fashion',
-    subtitle: 'Clothing Ecommerce with Wordpress',
-    description: `An ecommerce store for a small clothing business.`,
-    link: 'https://californiafashion.net'
-  },
-  {
-    imgSrc: './img/portfolio-florist.png',
-    imgSrcAlt: 'Something Blooms Floristry',
-    title: 'Something Blooms',
-    subtitle: `Single Page App with Vue 3`,
-    description: `A florist's personal portfolio showcasing her work. The whole site is set up as a Single Page Application, which means maximum responsiveness and app-like interactivity`,
-    link: 'https://somethingblooms.florist'
+    imgSrc: './img/portfolio-agreenprod.png',
+    imgSrcAlt: 'A Green Production',
+    title: 'AGreen Production',
+    subtitle: `Single Page App`,
+    description: `The whole website is set up as a Single Page Application, which means maximum responsiveness and app-like interactivity`,
+    link: 'https://agreenprod.com'
   },
   
 ]
