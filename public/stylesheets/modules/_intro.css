@@ -37,6 +37,7 @@
         align-items: flex-start;
         justify-content: space-evenly;
         height: 100%;
+        transform: translateY(-10%);
 
         @mixin atSmall {
             align-items: center;
