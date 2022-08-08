@@ -47,7 +47,7 @@
     cursor: default;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 950px) {
     .services {
         display: flex;
         max-width: 900px;

@@ -15,6 +15,14 @@ const items = [
     description: `The whole website is set up as a Single Page Application, which means maximum responsiveness and app-like interactivity`,
     link: 'https://agreenprod.com'
   },
+  {
+    imgSrc: './img/portfolio-keen.png',
+    imgSrcAlt: 'Keen Improvements',
+    title: 'Keen Improvements',
+    subtitle: `Wordpress`,
+    description: `Their business was focused on conveying the feeling of home comforts in a visually appealing way. A WordPress site was used to add blogging functionality for further engagement with clients.`,
+    link: 'https://keenimprovements.com'
+  },
   
 ]
 
